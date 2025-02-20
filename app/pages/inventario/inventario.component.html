@@ -1,0 +1,21 @@
+<h1>📦 Gestión de Inventario</h1>
+
+<!-- Dashboard -->
+<app-dashboard-inventario [productos]="productos"></app-dashboard-inventario>
+
+<!-- Formulario para agregar/editar productos -->
+<app-inventario-form
+  (productoAgregado)="agregarProducto($event)"
+  [productoEnEdicion]="productoEnEdicion">
+</app-inventario-form>
+
+<!-- Listado de productos -->
+<app-inventario-lista
+  [productos]="productos"
+  (editarProducto)="editarProducto($event)"
+  (eliminarProducto)="eliminarProducto($event)">
+</app-inventario-lista>
+
+<!-- Historial de movimientos -->
+<app-inventario-movimientos [movimientos]="movimientos"></app-inventario-movimientos>
+

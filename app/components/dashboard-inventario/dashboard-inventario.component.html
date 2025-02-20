@@ -1,0 +1,20 @@
+<h2>📊 Dashboard de Inventario</h2>
+
+<section>
+  <h3>🔥 Productos más vendidos</h3>
+  <ul>
+    <li *ngFor="let producto of productosMasVendidos">
+      {{ producto.nombre }} - {{ producto.cantidad }} unidades
+    </li>
+  </ul>
+</section>
+
+<section>
+    <h3>⚠️ Stock Bajo (Reposición Necesaria)</h3>
+    <ul>
+      <li *ngFor="let producto of productosBajoStock">
+        🚨 {{ producto.nombre }} - {{ producto.cantidad }} unidades (Stock mínimo: {{ producto.stockMinimo }})
+      </li>
+    </ul>
+  </section>
+  

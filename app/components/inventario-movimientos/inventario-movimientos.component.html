@@ -1,0 +1,24 @@
+<h2>📋 Historial de Movimientos</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Producto</th>
+      <th>Tipo</th>
+      <th>Cantidad</th>
+      <th>Origen</th>
+      <th>Destino</th>
+      <th>Fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let movimiento of movimientos">
+      <td>{{ movimiento.productoNombre }}</td>
+      <td>{{ movimiento.tipo === 'entrada' ? '🟢 Entrada' : '🔴 Salida' }}</td>
+      <td>{{ movimiento.cantidad }}</td>
+      <td>{{ movimiento.origen }}</td>
+      <td>{{ movimiento.destino }}</td>
+      <td>{{ movimiento.fecha | date:'short' }}</td>
+    </tr>
+  </tbody>
+</table>

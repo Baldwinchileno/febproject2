@@ -1,0 +1,33 @@
+<h2>Agregar Producto</h2>
+
+<form (ngSubmit)="agregarProducto()">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" [(ngModel)]="nuevoProducto.nombre" name="nombre" required>
+
+  <label for="precio">Precio:</label>
+  <input type="number" id="precio" [(ngModel)]="nuevoProducto.precio" name="precio" required>
+
+  <label for="cantidad">Cantidad:</label>
+  <input type="number" id="cantidad" [(ngModel)]="nuevoProducto.cantidad" name="cantidad" required>
+
+  <label for="categoria">Categoría:</label>
+  <select id="categoria" [(ngModel)]="nuevoProducto.categoria" name="categoria" required>
+    <option value="">Selecciona una categoría</option>
+    <option value="Carne de Res">Carne de Res</option>
+    <option value="Carne de Pollo">Carne de Pollo</option>
+  </select>
+
+  <label for="stockMinimo">Stock Mínimo:</label>
+<input type="number" id="stockMinimo" [(ngModel)]="nuevoProducto.stockMinimo" name="stockMinimo" required>
+
+
+  <label for="proveedor">Proveedor:</label>
+  <select id="proveedor" [(ngModel)]="nuevoProducto.proveedor" name="proveedor" required>
+    <option value="">Selecciona un proveedor</option>
+    <option value="Proveedor A">Proveedor A</option>
+    <option value="Proveedor B">Proveedor B</option>
+    <option value="Proveedor C">Proveedor C</option>
+  </select>
+
+  <button type="submit">Agregar</button>
+</form>

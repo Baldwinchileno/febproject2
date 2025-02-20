@@ -1,0 +1,26 @@
+<table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th>Categoría</th>
+        <th>Proveedor</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.precio | currency }}</td>
+        <td>{{ producto.cantidad }}</td>
+        <td>{{ producto.categoria }}</td>
+        <td>{{ producto.proveedor }}</td>
+        <td>
+          <button (click)="onEditar(producto)">✏️ Editar</button>
+          <button (click)="onEliminar(producto.id)">🗑️ Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
